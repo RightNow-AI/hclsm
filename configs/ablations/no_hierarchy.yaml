@@ -1,0 +1,7 @@
+# Ablation: single-scale dynamics (SSM only, no event/goal levels)
+dynamics:
+  level1:
+    n_layers: 0
+  level2:
+    n_layers: 0
+  event_threshold: 1.0

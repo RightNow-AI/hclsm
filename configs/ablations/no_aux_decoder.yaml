@@ -1,0 +1,3 @@
+# Ablation: SIGReg only (no auxiliary decoder for anti-collapse)
+training:
+  lambda_aux: 0.0

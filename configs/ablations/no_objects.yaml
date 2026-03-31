@@ -1,0 +1,8 @@
+# Ablation: flat JEPA baseline (no object decomposition)
+# Uses a single "slot" that captures the whole scene
+d_world: 768
+objects:
+  d_slot: 256
+  n_max_slots: 1
+  n_iterations: 1
+  gnn_rounds: 0

@@ -1,0 +1,30 @@
+d_world: 384
+perception:
+  d_model: 512
+  n_layers: 12
+  n_heads: 8
+objects:
+  d_slot: 192
+  n_max_slots: 32
+  n_iterations: 5
+  d_edge: 96
+  gnn_rounds: 2
+dynamics:
+  level0:
+    d_state: 48
+    n_blocks: 3
+  level1:
+    d_model: 384
+    n_layers: 3
+    n_heads: 6
+  level2:
+    d_model: 512
+    n_layers: 3
+    n_heads: 8
+causality:
+  enabled: true
+memory:
+  episodic_size: 5000
+  d_memory: 192
+training:
+  batch_size: 128

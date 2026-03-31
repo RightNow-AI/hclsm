@@ -1,0 +1,30 @@
+d_world: 1024
+perception:
+  d_model: 1024
+  n_layers: 32
+  n_heads: 16
+  init_from: v-jepa-2-large
+objects:
+  d_slot: 384
+  n_max_slots: 128
+  n_iterations: 7
+  d_edge: 192
+  gnn_rounds: 3
+dynamics:
+  level0:
+    d_state: 96
+    n_blocks: 6
+  level1:
+    d_model: 768
+    n_layers: 6
+    n_heads: 12
+  level2:
+    d_model: 1024
+    n_layers: 8
+    n_heads: 16
+causality:
+  enabled: true
+memory:
+  episodic_size: 50000
+  d_memory: 384
+  consolidation_every: 500

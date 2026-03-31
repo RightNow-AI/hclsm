@@ -1,0 +1,79 @@
+d_world: 384
+perception:
+  d_model: 512
+  n_layers: 12
+  n_heads: 8
+  patch_size: 16
+  input_resolution: 224
+  temporal_resolution: 16
+  dropout: 0.0
+  init_from: null
+objects:
+  d_slot: 192
+  n_max_slots: 32
+  n_iterations: 5
+  existence_threshold: 0.5
+  d_edge: 96
+  gnn_rounds: 2
+  birth_threshold: 0.7
+dynamics:
+  level0:
+    d_state: 48
+    n_blocks: 3
+    expand_ratio: 2
+  level1:
+    d_model: 384
+    n_layers: 3
+    n_heads: 6
+  level2:
+    d_model: 512
+    n_layers: 3
+    n_heads: 8
+    n_summary_tokens: 8
+    context_window: 256
+    d_goal: 0
+    d_action: 0
+  event_threshold: 0.7
+  event_window_size: 8
+  min_events_for_l2: 4
+causality:
+  enabled: true
+  dag_penalty_rho_init: 0.1
+  dag_penalty_rho_max: 10.0
+  sparsity_lambda: 0.01
+  temperature_init: 1.0
+  temperature_min: 0.1
+memory:
+  episodic_size: 5000
+  d_memory: 192
+  consolidation_every: 1000
+training:
+  batch_size: 8
+  lr: 0.00015
+  warmup_steps: 2000
+  total_steps: 50000
+  weight_decay: 0.05
+  max_grad_norm: 1.0
+  ema_decay: 0.996
+  use_amp: true
+  lambda_pred: 1.0
+  lambda_obj: 0.5
+  lambda_aux: 0.1
+  lambda_causal: 0.1
+  lambda_hierarchy: 0.25
+  lambda_sigreg: 0.1
+  gradient_accumulation_steps: 1
+  num_workers: 4
+  distributed_backend: nccl
+  seed: 42
+  fsdp_enabled: false
+  fsdp_sharding_strategy: FULL_SHARD
+  fsdp_cpu_offload: false
+  data_dir: ''
+  dataset_name: synthetic
+  video_backend: decord
+  use_gradient_checkpointing: false
+  log_every: 50
+  vis_every: 500
+  checkpoint_every: 2500
+  checkpoint_dir: runs/PRODUCTION_FINAL/checkpoints

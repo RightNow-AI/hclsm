@@ -1,0 +1,49 @@
+[project]
+name = "hclsm"
+version = "0.1.0"
+description = "Hierarchical Causal Latent State Machine — a novel world model architecture"
+readme = "README.md"
+license = {text = "Apache-2.0"}
+requires-python = ">=3.10"
+dependencies = [
+    "torch>=2.4",
+    "einops>=0.8",
+    "timm>=1.0",
+    "scipy>=1.11",
+    "wandb>=0.16",
+    "pyyaml>=6.0",
+]
+
+[project.optional-dependencies]
+kernels = [
+    "mamba-ssm>=2.0",
+    "triton>=3.0",
+    "flash-attn>=2.5",
+]
+video = [
+    "decord>=0.6",
+    "webdataset>=0.2",
+]
+dev = [
+    "pytest>=7.0",
+    "pytest-cov>=4.0",
+    "ruff>=0.4",
+    "mypy>=1.0",
+]
+
+[build-system]
+requires = ["setuptools>=68.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+include = ["hclsm*"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "N", "W", "UP"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

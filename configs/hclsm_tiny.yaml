@@ -1,0 +1,46 @@
+d_world: 256
+perception:
+  d_model: 384
+  n_layers: 6
+  n_heads: 6
+  patch_size: 16
+  input_resolution: 224
+  temporal_resolution: 16
+  dropout: 0.0
+objects:
+  d_slot: 128
+  n_max_slots: 16
+  n_iterations: 3
+  existence_threshold: 0.5
+  d_edge: 64
+  gnn_rounds: 1
+  birth_threshold: 0.7
+dynamics:
+  level0:
+    d_state: 32
+    n_blocks: 2
+    expand_ratio: 2
+  level1:
+    d_model: 256
+    n_layers: 2
+    n_heads: 4
+  level2:
+    d_model: 384
+    n_layers: 2
+    n_heads: 6
+    n_summary_tokens: 8
+    context_window: 256
+  event_threshold: 0.7
+  event_window_size: 8
+  min_events_for_l2: 4
+causality:
+  enabled: false
+memory:
+  episodic_size: 1000
+  d_memory: 128
+  consolidation_every: 1000
+training:
+  batch_size: 64
+  lr: 0.0003
+  warmup_steps: 10000
+  total_steps: 500000

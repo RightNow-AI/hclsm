@@ -1,0 +1,65 @@
+# Build
+__pycache__/
+*.pyc
+*.egg-info/
+dist/
+build/
+*.so
+
+# Environment
+.env
+.env.*
+*.env.local
+venv/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+
+# Claude Code (contains server IPs and session data)
+.claude/
+
+# Training outputs
+checkpoints/
+runs/
+wandb/
+*.pt
+*.pth
+
+# Data
+data/
+*.tar
+*.rar
+*.zip
+
+# Paper (keep separate)
+paper/
+
+# Modal (infrastructure-specific)
+modal_*.py
+
+# Internal prompts
+HCLSM-claude-code-prompt.md
+
+# Empty placeholders
+Cargo.toml
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Pytest
+.pytest_cache/
+htmlcov/
+
+# Logs
+*.log
+
+# Eval outputs (regenerated from checkpoints)
+eval_*/
+eval_results/
+
+# Production metrics
+docs/production_*.json
+docs/production_*.png

@@ -1,0 +1,5 @@
+# Ablation: Transformer-only dynamics (no SSM at Level 0)
+# Replace SSM with a simple Transformer for continuous dynamics
+dynamics:
+  level0:
+    n_blocks: 0

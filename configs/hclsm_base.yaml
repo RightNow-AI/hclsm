@@ -1,0 +1,29 @@
+d_world: 768
+perception:
+  d_model: 768
+  n_layers: 24
+  n_heads: 12
+  init_from: v-jepa-2-base
+objects:
+  d_slot: 256
+  n_max_slots: 64
+  n_iterations: 7
+  d_edge: 128
+  gnn_rounds: 2
+dynamics:
+  level0:
+    d_state: 64
+    n_blocks: 4
+  level1:
+    d_model: 512
+    n_layers: 4
+    n_heads: 8
+  level2:
+    d_model: 768
+    n_layers: 6
+    n_heads: 12
+causality:
+  enabled: true
+memory:
+  episodic_size: 10000
+  d_memory: 256

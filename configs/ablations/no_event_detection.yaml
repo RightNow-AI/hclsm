@@ -1,0 +1,7 @@
+# Ablation: no event detection (all timesteps are events)
+# Forces Level 1 to process every timestep, removing hierarchy benefit
+d_world: 768
+dynamics:
+  event_threshold: 0.0
+  event_window_size: 1
+  min_events_for_l2: 1

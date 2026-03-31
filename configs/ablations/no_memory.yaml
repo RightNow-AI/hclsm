@@ -1,0 +1,7 @@
+# Ablation: no continual learning memory
+# Episodic memory disabled (size=0), no consolidation
+d_world: 768
+memory:
+  episodic_size: 0
+  d_memory: 256
+  consolidation_every: 999999999

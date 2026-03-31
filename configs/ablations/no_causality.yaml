@@ -1,0 +1,5 @@
+# Ablation: no causal graph learning
+causality:
+  enabled: false
+training:
+  lambda_causal: 0.0
