@@ -7,7 +7,7 @@
 [![Python 3.10+](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/downloads/)
 [![Tests](https://img.shields.io/badge/tests-171%20passing-brightgreen.svg)]()
 
-> Jaber Jaber and Osama Jaber, [RightNow AI](https://www.rightnowai.co/)
+> [RightNow AI](https://www.rightnowai.co/)
 
 ---
 
